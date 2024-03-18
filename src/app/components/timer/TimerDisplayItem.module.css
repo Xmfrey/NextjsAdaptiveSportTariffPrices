@@ -1,0 +1,46 @@
+.countdown {
+  text-align: center;
+}
+
+.timer__value {
+  font-family: Bebas, sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: #01b9c5;
+}
+.danger .timer__value {
+  animation: danger 1s ease infinite alternate;
+}
+
+.ended .timer__value {
+  color: #fd4d35;
+}
+
+.timer__field {
+  font-weight: 700;
+  font-size: 16px;
+  color: #818798;
+}
+
+@keyframes danger {
+  0% {
+    color: #01b9c5;
+  }
+  100% {
+    color: #fd4d35;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timer__value {
+    font-size: 40px;
+  }
+  .timer__fields {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #818798;
+  }
+}

@@ -1,0 +1,29 @@
+.Button {
+  font-family: Rubik, sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #fd4d35;
+  padding: 28px 100px;
+  border-radius: 60px;
+  transition: background 0.3s ease;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.Button:hover {
+  background: #c24333;
+}
+
+.ModalButton {
+  border-radius: 30px;
+  padding: 21px;
+  text-transform: initial;
+}
+
+@media screen and (max-width: 650px) {
+  .Button {
+    width: 100%;
+  }
+}

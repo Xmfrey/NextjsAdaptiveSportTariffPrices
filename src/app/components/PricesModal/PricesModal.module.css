@@ -1,0 +1,201 @@
+.PricesModal {
+  position: fixed;
+  visibility: hidden;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  z-index: 99;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.PricesModal__body {
+  position: relative;
+  display: inline-block;
+  max-width: 750px;
+  width: 100%;
+  padding: 0 40px 40px;
+  background: #f5f7f7;
+}
+
+.PricesModal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.PricesModal__close::before,
+.PricesModal__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ced1d8;
+  transform: rotate(-45deg);
+  transition: background 0.3s ease;
+}
+
+.PricesModal__close::after {
+  transform: rotate(45deg);
+}
+
+.PricesModal__close:hover.PricesModal__close::before,
+.PricesModal__close:hover.PricesModal__close::after {
+  background: #666b78;
+}
+
+.PricesModal__preTitle {
+  display: inline-block;
+  padding: 4px 10px 6px;
+  background: #01b9c5;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.PricesModal__titleBlock {
+  text-align: center;
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+
+.PricesModal__Title {
+  font-family: Rubik, sans-serif;
+  padding: 0 25px;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #12191d;
+  margin-bottom: 30px;
+}
+
+.PricesModal__Title span {
+  color: #01b9c5;
+}
+
+.PricesModal__postTitle {
+  font-size: 24px;
+  color: #12191d;
+  margin-bottom: 8px;
+}
+
+.PricesModal__postTitle span {
+  font-family: Rubik, sans-serif;
+  color: #2d3242;
+}
+
+.PricesModal__postTitleOffer {
+  display: inline-block;
+  border: 2px solid #01b9c5;
+  border-radius: 30px;
+  padding: 14px 29px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2d3242;
+}
+
+.PricesModal__postTitleOffer span {
+  color: #01b9c5;
+}
+
+.PricesModal__formItems {
+  margin-bottom: 40px;
+}
+
+.PricesModal__formPreview {
+  font-size: 24px;
+  line-height: 130%;
+  color: #12191d;
+  margin-bottom: 20px;
+}
+
+.PricesModal__formItems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 6px;
+}
+
+.PricesModal__formButton {
+  text-align: center;
+}
+
+@media screen and (max-width: 830px) {
+  .PricesModal__body {
+    padding: 0 20px 20px;
+  }
+
+  .PricesModal__preTitle {
+    font-size: 14px;
+    margin: 0 0 22px -20px;
+  }
+  .PricesModal__formItems {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 20px;
+    row-gap: 6px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .PricesModal__Title {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
+  .PricesModal__Title span {
+    display: block;
+  }
+
+  .PricesModal__postTitle {
+    font-size: 14px;
+  }
+
+  .PricesModal__postTitleOffer {
+    padding: 13px 11px;
+    font-size: 15px;
+  }
+
+  .PricesModal__formPreview {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .PricesModal__formItems {
+    margin-bottom: 20px;
+  }
+  .PricesModal__close {
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .PricesModal__close::before,
+  .PricesModal__close::after {
+    height: 1px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .PricesModal__Title {
+    text-align: initial;
+  }
+}

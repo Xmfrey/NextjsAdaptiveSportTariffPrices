@@ -1,0 +1,86 @@
+.Checkbox__body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Checkbox__button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+.Checkbox__button:focus-visible::before {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.Checkbox__button {
+  position: relative;
+  min-width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.Checkbox__button::before,
+.Checkbox__button::after {
+  position: absolute;
+  content: "";
+}
+
+.Checkbox__button::before {
+  top: 0;
+  left: 0;
+  min-width: inherit;
+  height: inherit;
+  border: 2px solid #01b9c5;
+  border-radius: 5px;
+  transition: background 0.2s ease-out;
+}
+
+.Checkbox__button::after {
+  top: 6px;
+  left: 6px;
+  width: 14px;
+  height: 8px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(-50deg);
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+.Checkbox__button:checked::after {
+  opacity: 1;
+}
+
+.Checkbox__button:checked::before {
+  background: #01b9c5;
+}
+
+.Checkbox__label {
+  max-width: 418px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  color: #818798;
+  cursor: pointer;
+}
+
+.Checkbox__link {
+  color: #2d97f9;
+  transition: opacity 0.1s ease;
+}
+
+.Checkbox__link:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 420px) {
+  .Checkbox__label {
+    max-width: 279px;
+  }
+}

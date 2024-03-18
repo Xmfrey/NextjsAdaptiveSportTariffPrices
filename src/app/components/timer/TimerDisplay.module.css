@@ -1,0 +1,51 @@
+.timer {
+  background-color: #fff;
+}
+
+.timer__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer__title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.timer__delimiter {
+  font-size: 40px;
+  line-height: 100%;
+  color: #01b9c5;
+  margin: 0 10px 20px;
+}
+
+.danger {
+  animation: danger 1s ease infinite alternate;
+}
+
+.ended {
+  color: #fd4d35;
+}
+
+@keyframes danger {
+  0% {
+    color: #01b9c5;
+  }
+  100% {
+    color: #fd4d35;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timer {
+    padding: 12px 0;
+  }
+
+  .timer__title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
