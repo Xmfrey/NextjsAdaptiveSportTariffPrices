@@ -4,9 +4,10 @@ import styles from "./page.module.css";
 import { apiPrices } from "@/services/nav.services";
 import { PricesBlock } from "./components/prices-block/PricesBlock";
 import { Timer } from "./components/timer/Timer";
-import { TimerProvider } from "./useContext/timerContext";
+import { TimerProvider } from "@/useContext/timerContext";
 
 export default function Home() {
+  const [myTime, setMyTime] = useState(0);
   // const [prices, setPrices] = useState([]);
 
   // async function fetchPrices() {
@@ -18,14 +19,14 @@ export default function Home() {
   //   fetchPrices();
   // }, []);
 
-  const myTime = 2 * 60 * 1000;
-  const msTime = new Date().getTime();
-  const dateTimeAfterMyTime = msTime + myTime;
+  useEffect(() => {
+    setMyTime(new Date().getTime() + 2 * 60 * 1000);
+  }, []);
 
   return (
     <TimerProvider>
       <div>
-        <Timer targetDate={dateTimeAfterMyTime} />
+        <Timer targetDate={myTime} suppressHydrationWarning />
         <PricesBlock />
       </div>
     </TimerProvider>

@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useTimer } from "@/app/hooks/useTimer";
+import { useTimer } from "@/hooks/useTimer";
 import { PricesModal } from "../PricesModal/PricesModal";
-import { useTimerContext } from "@/app/useContext/timerContext";
+import { useTimerContext } from "@/useContext/timerContext";
 import { TimerDisplay } from "./TimerDisplay";
 
 export const Timer = ({ targetDate }) => {
@@ -12,7 +12,7 @@ export const Timer = ({ targetDate }) => {
 
   useEffect(() => {
     if (days + hours + minutes + seconds === 0) {
-      setEndTimer(true);
+      setEndTimer((prev) => !prev);
     }
   }, [days, hours, minutes, seconds]);
 

@@ -86,7 +86,7 @@
 }
 .PricesItem:last-child .PricesItem__body {
   display: flex;
-  padding: 23px 52px 25px 31px;
+  padding: 23px 41px 25px 31px;
 }
 
 .PricesItem:last-child .PricesItem__name {
@@ -140,6 +140,11 @@
     text-align: initial;
     font-size: 14px;
   }
+
+  .PricesItem__description span:last-child {
+    display: none;
+  }
+
   .PricesItem__price {
     font-size: 44px;
     letter-spacing: -0.05em;

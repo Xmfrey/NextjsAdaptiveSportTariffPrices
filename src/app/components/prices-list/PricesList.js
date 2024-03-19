@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PricesList.module.css";
 import { PricesItem } from "../prices-item/PricesItem";
 import { prices } from "../../../../data/pricesData";
-import { useTimerContext } from "@/app/useContext/timerContext";
+import { useTimerContext } from "@/useContext/timerContext";
 
 export const PricesList = () => {
   const { endTimer, setEndTimer } = useTimerContext();

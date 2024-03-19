@@ -1,24 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./PricesItem.module.css";
 
 export const PricesItem = ({ prices }) => {
-  const [width, setWidth] = useState(0);
-  const SCREEN = 650;
-
-  useEffect(() => {
-    if (!width) {
-      setWidth(window.innerWidth);
-    }
-    const handleResize = (event) => {
-      setWidth(event.target.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div className={styles.PricesItem}>
       <label htmlFor={prices?.id} className={styles.PricesItem__label}>
@@ -44,14 +28,13 @@ export const PricesItem = ({ prices }) => {
           </div>
           {prices?.desc && !prices?.addDesc ? (
             <div className={styles.PricesItem__description}>{prices.desc}</div>
-          ) : prices?.addDesc && width > SCREEN ? (
-            <div className={styles.PricesItem__description}>{prices.desc}</div>
           ) : (
             ""
           )}
-          {prices?.addDesc && width <= SCREEN ? (
+          {prices?.addDesc ? (
             <div className={styles.PricesItem__description}>
-              {prices.addDesc}
+              <span> {prices.desc}</span>
+              <span> {prices.addDesc}</span> ⭐️
             </div>
           ) : (
             ""

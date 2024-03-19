@@ -64,8 +64,8 @@ export const prices = [
     statusId: null,
     creationDateTime: "2024-03-14T02:37:37.051227+03:00",
     deleted: false,
-    desc: "Всегда быть в форме и поддерживать своё здоровье ⭐️",
-    addDesc: "Всегда быть в форме ⭐️",
+    desc: "Всегда быть в форме",
+    addDesc: "и поддерживать своё здоровье",
     percents: "-70%",
   },
   {
@@ -126,8 +126,8 @@ export const prices = [
     statusId: null,
     creationDateTime: "2024-03-14T02:37:37.0512298+03:00",
     deleted: false,
-    desc: "Всегда быть в форме и поддерживать своё здоровье ⭐️",
-    addDesc: "Всегда быть в форме ⭐️",
+    desc: "Всегда быть в форме",
+    addDesc: "и поддерживать своё здоровье",
   },
   {
     name: "1 неделя",
