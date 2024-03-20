@@ -14,17 +14,6 @@ export const TimerDisplay = ({ days, hours, minutes, seconds }) => {
             isDanger={minutes == 0 && seconds <= 30 && seconds > 0}
             ended={minutes + seconds === 0}
           />
-          <div
-            className={
-              minutes == 0 && seconds <= 30 && seconds > 0
-                ? [styles.timer__delimiter, styles.danger].join(" ")
-                : minutes + seconds === 0
-                ? [styles.timer__delimiter, styles.ended].join(" ")
-                : styles.timer__delimiter
-            }
-          >
-            :
-          </div>
           <TimerDisplayItem
             value={seconds}
             type={"Секунд"}

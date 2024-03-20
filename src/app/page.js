@@ -7,7 +7,6 @@ import { Timer } from "./components/timer/Timer";
 import { TimerProvider } from "@/useContext/timerContext";
 
 export default function Home() {
-  const [myTime, setMyTime] = useState(0);
   // const [prices, setPrices] = useState([]);
 
   // async function fetchPrices() {
@@ -19,14 +18,13 @@ export default function Home() {
   //   fetchPrices();
   // }, []);
 
-  useEffect(() => {
-    setMyTime(new Date().getTime() + 2 * 60 * 1000);
-  }, []);
-
   return (
     <TimerProvider>
       <div>
-        <Timer targetDate={myTime} suppressHydrationWarning />
+        <Timer
+          targetDate={new Date().getTime() + 2 * 60 * 1000}
+          suppressHydrationWarning
+        />
         <PricesBlock />
       </div>
     </TimerProvider>

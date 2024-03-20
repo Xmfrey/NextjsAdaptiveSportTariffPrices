@@ -1,4 +1,20 @@
 .countdown {
+  position: relative;
+  text-align: center;
+}
+
+.countdown:not(:last-child) {
+  margin-right: 30px;
+}
+
+.countdown:not(:last-child)::before {
+  content: ":";
+  position: absolute;
+  top: 4px;
+  right: -22px;
+  font-size: 40px;
+  line-height: 100%;
+  color: #01b9c5;
   text-align: center;
 }
 
@@ -10,11 +26,13 @@
   text-transform: uppercase;
   color: #01b9c5;
 }
-.danger .timer__value {
+.danger .timer__value,
+.danger:not(:last-child)::before {
   animation: danger 1s ease infinite alternate;
 }
 
-.ended .timer__value {
+.ended .timer__value,
+.ended:not(:last-child)::before {
   color: #fd4d35;
 }
 
@@ -42,5 +60,16 @@
     font-size: 14px;
     line-height: 130%;
     color: #818798;
+  }
+
+  .countdown:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .countdown:not(:last-child)::before {
+    top: 0;
+    right: -15px;
+    font-size: 30px;
+    color: #01b9c5;
   }
 }
