@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useTimer } from "@/hooks/useTimer";
-import { PricesModal } from "../PricesModal/PricesModal";
+import { PricesModal } from "../prices-modal/PricesModal";
 import { useTimerContext } from "@/useContext/timerContext";
 import { TimerDisplay } from "./TimerDisplay";
 

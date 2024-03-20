@@ -141,7 +141,7 @@
     font-size: 14px;
   }
 
-  .PricesItem__description span:last-child {
+  .PricesItem__descriptionAddDesc {
     display: none;
   }
 

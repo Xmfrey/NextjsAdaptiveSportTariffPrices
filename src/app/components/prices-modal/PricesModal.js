@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./PricesModal.module.css";
 import { prices } from "../../../../data/pricesData";
-import { PricesModalItem } from "../PricesModalItem/PricesModalItem";
+import { PricesModalItem } from "../prices-modal-item/PricesModalItem";
 import { Button } from "../ui/button/Button";
 
 export const PricesModal = ({ active, setActive }) => {

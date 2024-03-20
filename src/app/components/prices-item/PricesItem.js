@@ -27,14 +27,20 @@ export const PricesItem = ({ prices }) => {
             )}
           </div>
           {prices?.desc && !prices?.addDesc ? (
-            <div className={styles.PricesItem__description}>{prices.desc}</div>
+            <div className={styles.PricesItem__description}>
+              {prices.desc} <span>{prices?.icon}</span>
+            </div>
           ) : (
             ""
           )}
           {prices?.addDesc ? (
             <div className={styles.PricesItem__description}>
               <span> {prices.desc}</span>
-              <span> {prices.addDesc}</span> ⭐️
+              <span className={styles.PricesItem__descriptionAddDesc}>
+                {" "}
+                {prices.addDesc}
+              </span>{" "}
+              <span>{prices?.icon}</span>
             </div>
           ) : (
             ""
