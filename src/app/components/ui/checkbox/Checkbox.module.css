@@ -5,6 +5,11 @@
 }
 
 .Checkbox__button {
+  position: relative;
+  min-width: 24px;
+  height: 24px;
+  cursor: pointer;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: none;
@@ -19,12 +24,6 @@
   outline-offset: 2px;
 }
 
-.Checkbox__button {
-  position: relative;
-  min-width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
 .Checkbox__button::before,
 .Checkbox__button::after {
   position: absolute;

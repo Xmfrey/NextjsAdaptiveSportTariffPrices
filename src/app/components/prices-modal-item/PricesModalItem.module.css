@@ -4,8 +4,8 @@
 
 .PricesModalItem__radio {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 26px;
+  right: 26px;
   pointer-events: none;
   opacity: 0;
 }

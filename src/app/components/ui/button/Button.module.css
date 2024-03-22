@@ -11,6 +11,7 @@
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
+  -webkit-tap-highlight-color: transparent;
 }
 .Button:hover {
   background: #c24333;
