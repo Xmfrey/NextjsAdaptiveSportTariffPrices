@@ -4,14 +4,10 @@
 
 .PricesItem__radio {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-}
-
-.PricesItem__radio:checked + .PricesItem__body {
-  border: 2px solid #01b9c5;
-  background: rgba(1, 185, 197, 0.05);
 }
 
 .PricesItem__body {
@@ -25,7 +21,7 @@
   text-align: center;
 }
 
-.PricesItem__body:hover {
+.PricesItem__radio:checked + .PricesItem__body {
   border: 2px solid #01b9c5;
   background: rgba(1, 185, 197, 0.05);
 }
@@ -105,6 +101,13 @@
 .PricesItem:last-child .PricesItem__description {
   text-align: initial;
   align-self: center;
+}
+
+@media screen and (width > 1024px) {
+  .PricesItem__body:hover {
+    border: 2px solid #01b9c5;
+    background: rgba(1, 185, 197, 0.05);
+  }
 }
 
 @media screen and (max-width: 650px) {
